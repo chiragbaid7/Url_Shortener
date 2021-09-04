@@ -1,0 +1,51 @@
+Date : 2021-09-04 01:04:33
+Directory : c:\Users\Chirag\Desktop\Url_Shortener
+Total : 16 files,  1981 codes, 10 comments, 44 blanks, all 2035 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JSON       |          2 |      1,732 |          0 |          2 |      1,734 |
+| JavaScript |         13 |        212 |         10 |         35 |        257 |
+| Markdown   |          1 |         37 |          0 |          7 |         44 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                              | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                 |         16 |      1,981 |         10 |         44 |      2,035 |
+| src                                                               |         13 |        212 |         10 |         35 |        257 |
+| src\api                                                           |          1 |         22 |          1 |          5 |         28 |
+| src\config                                                        |          1 |          7 |          0 |          2 |          9 |
+| src\core                                                          |          4 |         45 |          2 |          6 |         53 |
+| src\data-access                                                   |          1 |         43 |          1 |          4 |         48 |
+| src\database                                                      |          1 |         18 |          1 |          4 |         23 |
+| src\database\models                                               |          1 |         18 |          1 |          4 |         23 |
+| src\helpers                                                       |          2 |         32 |          1 |          6 |         39 |
+| src\service                                                       |          1 |         36 |          4 |          4 |         44 |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                          | language   | code       | comment    | blank      | total      |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\Chirag\Desktop\Url_Shortener\Readme.md                   | Markdown   |         37 |          0 |          7 |         44 |
+| c:\Users\Chirag\Desktop\Url_Shortener\package-lock.json           | JSON       |      1,707 |          0 |          1 |      1,708 |
+| c:\Users\Chirag\Desktop\Url_Shortener\package.json                | JSON       |         25 |          0 |          1 |         26 |
+| c:\Users\Chirag\Desktop\Url_Shortener\src\api\url.js              | JavaScript |         22 |          1 |          5 |         28 |
+| c:\Users\Chirag\Desktop\Url_Shortener\src\app.js                  | JavaScript |          9 |          0 |          3 |         12 |
+| c:\Users\Chirag\Desktop\Url_Shortener\src\config\index.js         | JavaScript |          7 |          0 |          2 |          9 |
+| c:\Users\Chirag\Desktop\Url_Shortener\src\core\Api404Error.js     | JavaScript |         13 |          0 |          2 |         15 |
+| c:\Users\Chirag\Desktop\Url_Shortener\src\core\Api422Error.js     | JavaScript |         13 |          0 |          2 |         15 |
+| c:\Users\Chirag\Desktop\Url_Shortener\src\core\baseError.js       | JavaScript |         12 |          2 |          1 |         15 |
+| c:\Users\Chirag\Desktop\Url_Shortener\src\core\httpStatusCodes.js | JavaScript |          7 |          0 |          1 |          8 |
+| c:\Users\Chirag\Desktop\Url_Shortener\src\data-access\url.js      | JavaScript |         43 |          1 |          4 |         48 |
+| c:\Users\Chirag\Desktop\Url_Shortener\src\database\models\url.js  | JavaScript |         18 |          1 |          4 |         23 |
+| c:\Users\Chirag\Desktop\Url_Shortener\src\helpers\schema.js       | JavaScript |         14 |          0 |          4 |         18 |
+| c:\Users\Chirag\Desktop\Url_Shortener\src\helpers\validator.js    | JavaScript |         18 |          1 |          2 |         21 |
+| c:\Users\Chirag\Desktop\Url_Shortener\src\server.js               | JavaScript |          0 |          0 |          1 |          1 |
+| c:\Users\Chirag\Desktop\Url_Shortener\src\service\url.js          | JavaScript |         36 |          4 |          4 |         44 |
+| Total                                                             |            |      1,981 |         10 |         44 |      2,035 |
++-------------------------------------------------------------------+------------+------------+------------+------------+------------+
