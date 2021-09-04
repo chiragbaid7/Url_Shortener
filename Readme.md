@@ -24,7 +24,6 @@ flexible to future inevitable changes.**
 |   |   └── models
 |   |       ├── url.js
 │   │       └── users.js
-│   │
 │   ├── data-access
 │   │   └── url.js
 │   ├── core
