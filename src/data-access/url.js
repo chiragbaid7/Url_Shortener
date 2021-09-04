@@ -20,11 +20,13 @@ const getShortUrl = async (shorturl) => {
 };
 
 const getLongUrl = async (shorturl) => {
-  const a = await Url.findOne({ shorturl: shorturl }, "longurl");
-  if (!a) {
+  const doc = await Url.findOne({ shorturl: shorturl }, "longurl clickcount");
+  if (!doc) {
     throw BaseError.Api404Error("Resouce Not Found");
   }
-  return a;
+  //increment clickcount 
+  await doc.updateOne({ clickcount: doc.clickcount + 1 });
+  return doc;
 };
 module.exports = {
   createShortUrl,

@@ -7,7 +7,7 @@ router.post("/", async (req, res, next) => {
     const result = await create(longurl, alias);
     res.status(201).json({ message: result });
   } catch (err) {
-    res.json(err);
+    next(err);
   }
 });
 
@@ -18,7 +18,7 @@ router.get("/:id", async (req, res, next) => {
     const response = await get(shorturl);
     res.redirect(response.longurl);
   } catch (err) {
-    res.json(err);
+    next(err);
   }
 });
 

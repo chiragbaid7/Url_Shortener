@@ -4,5 +4,6 @@ require("dotenv").config({ path: path.join(__dirname, "../.env") });
 
 module.exports = {
   Mongo_Url: process.env.MONGO_URL,
-  Port:process.env.PORT
+  Port:process.env.PORT,
+  URL:process.env.URL
 };

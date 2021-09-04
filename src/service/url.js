@@ -17,7 +17,7 @@ const create = async (longurl, alias) => {
       await validateAlias(alias);
       shorturl = "http://localhost:8080/" + alias;
     } else {
-      //reduce the id size to increase collison probabIlity
+      //if reduce the id size to increase collison probabIlity
       shorturl = "http://localhost:8080/" + nanoid(7);
     }
     //check if short url is already present in the database
