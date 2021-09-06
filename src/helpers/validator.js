@@ -1,4 +1,10 @@
-const { UrlSchema, AliasSchema } = require("./schema");
+const {
+  UrlSchema,
+  AliasSchema,
+  SignupSchema,
+  LoginSchema,
+} = require("./schema-validator");
+
 const BaseError = require("../core/BaseError");
 module.exports = {
   validateUrl: async (longUrl) => {
@@ -12,6 +18,27 @@ module.exports = {
   validateAlias: async (alias) => {
     try {
       await AliasSchema.validateAsync({ alias: alias });
+    } catch (err) {
+      throw BaseError.Api422Error(err.message);
+    }
+  },
+  validateSignup: async ({ name, email, password }) => {
+    try {
+      await SignupSchema.validateAsync({
+        name: name,
+        email: email,
+        password: password,
+      });
+    } catch (err) {
+      throw BaseError.Api422Error(err.message);
+    }
+  },
+  validateLogin: async ({ email, password }) => {
+    try {
+      await LoginSchema.validateAsync({
+        email: email,
+        password: password,
+      });
     } catch (err) {
       throw BaseError.Api422Error(err.message);
     }

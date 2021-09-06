@@ -40,5 +40,13 @@ class BaseError extends Error {
       true
     );
   }
+  static Api401Error(name) {
+    return new BaseError(
+      name,
+      httpStatusCode.Unauthorized,
+      "Authorization Required",
+      true
+    );
+  }
 }
 module.exports = BaseError;

@@ -13,7 +13,7 @@ const UrlSchema = new Schema({
   },
   clickcount: {
     type: Number,
-    default: 0,
+    default: -1,
   },
 });
 
