@@ -15,25 +15,33 @@ flexible to future inevitable changes.**
 │
 ├── src
 |   ├── api
-|   |   └── v1
-|   |       ├── url
-|   |       |   └── url.js
-|   |       └── users
-|   |           └── users.js
+|   |   ├── private
+|   |   |   └── url.js
+|   |   └── public
+|   |       ├── url.js
+|   |       └── user.js
+|   ├── auth
+|   |   └── auth.js
+│   ├── config
+│   │   └── index.js
+│   ├── core
+│   │   ├── ApiErrorHandeler.js
+│   │   ├── BaseError.js
+│   │   └── httpStatusCode.js
 |   ├── database
 |   |   └── models
 |   |       ├── url.js
 │   │       └── users.js
 │   ├── data-access
-│   │   └── url.js
-│   ├── core
-│   │   └── BaseError.js
-│   ├── service
+|   |   ├── user.js
 │   │   └── url.js
 │   ├── helpers
+|   |   ├── rate-limit.js
+|   |   ├── schema-validator.js
 │   │   └── validator.js
-│   ├── config
-│   │   └── .env
+│   ├── service
+|   |   ├── user.js
+│   │   └── url.js
 ├── app.js
 ├── package.json
 ├── Readme.md
