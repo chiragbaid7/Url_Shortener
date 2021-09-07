@@ -4,11 +4,13 @@ const {
   getLongUrl,
   appendUrl,
   getUrls,
+  deleteUrl,
+  findUrl,
 } = require("../data-access/url");
-
+const { DOMAIN, BASE_62 } = require("../config/index");
 //nanoid is a library for generating random ids
-const { nanoid } = require("nanoid");
-
+const { customAlphabet } = require("nanoid");
+const nanoid = customAlphabet(BASE_62, 7);
 const { validateUrl, validateAlias } = require("../helpers/validator");
 
 const create = async (longurl, alias) => {
@@ -16,16 +18,15 @@ const create = async (longurl, alias) => {
   let shorturl;
   if (alias !== undefined) {
     await validateAlias(alias);
-    shorturl = "http://localhost:8080/" + alias;
+    shorturl = DOMAIN + alias;
   } else {
     //if reduce the id size to increase collison probabIlity
-    shorturl = "http://localhost:8080/" + nanoid(7);
+    shorturl = DOMAIN + nanoid();
   }
   //check if short url is already present in the database
   await getShortUrl(shorturl);
   const result = await createShortUrl(shorturl, longurl);
   //containes the document
-
   return result;
 };
 const get = async (shorturl) => {
@@ -39,10 +40,19 @@ const Userurls = async (user_id) => {
   const urls = await getUrls(user_id);
   return urls;
 };
+const Delete = async (id) => {
+  await deleteUrl(id);
+};
 
+const find = async (id) => {
+  const result = await findUrl(id);
+  return result;
+};
 module.exports = {
   create,
   get,
   append,
   Userurls,
+  Delete,
+  find,
 };

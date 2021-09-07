@@ -16,4 +16,10 @@ const verifytoken = async (req, res, next) => {
     next(BaseError.Api401Error(err.message));
   }
 };
-module.exports = verifytoken;
+const sign = async (user_id) => {
+  const jwttoken = await jwt.sign({ id: user_id }, SECRET_KEY, {
+    expiresIn: "20m",
+  });
+  return jwttoken;
+};
+module.exports = { verifytoken, sign };
