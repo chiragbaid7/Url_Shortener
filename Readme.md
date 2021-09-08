@@ -70,7 +70,7 @@ flexible to future inevitable changes.**
 * getURL(short_url):301(Redirect)
 
 * listURLs(user_id)
-    *Response Body:200 
+    * Response Body:200 
     ```
     {
         "data": [
