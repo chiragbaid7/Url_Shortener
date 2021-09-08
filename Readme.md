@@ -108,6 +108,7 @@ flexible to future inevitable changes.**
 | password:String |
 
 **Why NoSQL over SQL?**
-* We need to store billions of records.
-* There are no relationships between records—other than storing which user created a URL.
-* Our service is read-heavy.
+
+- We need to store billions of records.
+- There are no relationships between records—other than storing which user created a URL.
+- Our service is read-heavy.
