@@ -89,3 +89,9 @@ flexible to future inevitable changes.**
     ]
   }
   ```
+### Database Design 
+
+|URL|      
+|--------|
+|shorturl:string| 
+|longurl:string| 
