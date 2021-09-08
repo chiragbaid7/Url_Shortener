@@ -9,7 +9,6 @@ const verifytoken = async (req, res, next) => {
       req.id = payload.id;
       next();
     } else {
-      //user has not loged in so use public apis
       throw BaseError.Api401Error("Please Login to continue");
     }
   } catch (err) {
@@ -18,7 +17,7 @@ const verifytoken = async (req, res, next) => {
 };
 const sign = async (user_id) => {
   const jwttoken = await jwt.sign({ id: user_id }, SECRET_KEY, {
-    expiresIn: "20m",
+    expiresIn: "30m",
   });
   return jwttoken;
 };

@@ -42,7 +42,7 @@ const createURL = async (longurl, alias, user_id) => {
   const result = await createShortUrl(shorturl, longurl, user_id);
   return result;
 };
-const get = async (shorturl) => {
+const getURL = async (shorturl) => {
   const a = await getLongUrl(shorturl);
   return a;
 };
@@ -61,7 +61,7 @@ const findURL = async (id) => {
 };
 module.exports = {
   createURL,
-  get,
+  getURL,
   userURLs,
   deleteURL,
   findURL,
