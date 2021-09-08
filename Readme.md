@@ -89,19 +89,20 @@ flexible to future inevitable changes.**
     ]
   }
   ```
-### Database Design 
 
-|URL|                       
-|--------|                  
-|_id:ObjectID|               
-|shorturl:string|            
-|longurl:string|             
-|clickcount:Number|          
-|createdby:ObjectId|
+### Database Design
 
-|USERS|
-|--------|
-|_id:ObjectID|
-|name:String|  
-|email:String|
-|password:String|
+| URL                |
+| ------------------ |
+| \_id:ObjectId      |
+| shorturl:string    |
+| longurl:string     |
+| clickcount:Number  |
+| createdby:ObjectId |
+
+| USERS           |
+| --------------- |
+| \_id:ObjectId   |
+| name:String     |
+| email:String    |
+| password:String |
