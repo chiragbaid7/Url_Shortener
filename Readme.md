@@ -53,40 +53,39 @@ flexible to future inevitable changes.**
 
 ### System APIs
 
-* createURL(long_url,alias=None,user_id)
-    * Response Body:201
-    ```json
-    {
-        "message": "success",
-        "data": {
-            "shorturl": "http://localhost:8080/FwcE4IV",
-            "longurl": "https://www.educative.io/courses/grokking-the-system-design-interview/m2ygV4E81AR",
-            "clickcount": 0,
-            "createdby": "613903e4fc682fd9c47186f9",
-            "_id": "6139182b59b234b4ea0d20f0",
-            }
+- createURL(long_url,alias=None,user_id)
+  - Response Body:201
+  ```json
+  {
+    "message": "success",
+    "data": {
+      "shorturl": "http://localhost:8080/FwcE4IV",
+      "longurl": "https://www.educative.io/courses/grokking-the-system-design-interview/m2ygV4E81AR",
+      "clickcount": 0,
+      "createdby": "613903e4fc682fd9c47186f9",
+      "_id": "6139182b59b234b4ea0d20f0"
     }
-    ```
-* getURL(short_url):301(Redirect)
+  }
+  ```
+- getURL(short_url):301(Redirect)
 
-* listURLs(user_id)
-    * Response Body:200 
-    ```json
-    {
-        "data": [
-            {
-                "_id": "613903f8fc682fd9c47186fc",
-                "shorturl": "http://localhost:8080/0WKmRFT",
-                "longurl": "https://www.youtube.com/watch?v=ZE5zXLOyEOQ",
-                "clickcount": 1,
-            },
-            {
-                "_id": "6139182b59b234b4ea0d20f0",
-                "shorturl": "http://localhost:8080/FwcE4IV",
-                "longurl": "https://stackoverflow.com/questions/14597241/setting-expiry-time-for-a-collection-in-mongodb-using-mongoose",
-                "clickcount": 0,
-            }
-        ]
-    }
-    ```
-    
+- listURLs(user_id)
+  - Response Body:200
+  ```json
+  {
+    "data": [
+      {
+        "_id": "613903f8fc682fd9c47186fc",
+        "shorturl": "http://localhost:8080/0WKmRFT",
+        "longurl": "https://www.youtube.com/watch?v=ZE5zXLOyEOQ",
+        "clickcount": 1
+      },
+      {
+        "_id": "6139182b59b234b4ea0d20f0",
+        "shorturl": "http://localhost:8080/FwcE4IV",
+        "longurl": "https://stackoverflow.com/questions/14597241/setting-expiry-time-for-a-collection-in-mongodb-using-mongoose",
+        "clickcount": 0
+      }
+    ]
+  }
+  ```
