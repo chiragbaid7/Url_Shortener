@@ -55,6 +55,7 @@ flexible to future inevitable changes.**
 
 * createURL(long_url,alias=None,user_id)
     * Response Body
+    ```
     {
     "message": "success",
     "data": {
@@ -63,9 +64,9 @@ flexible to future inevitable changes.**
         "clickcount": 0,
         "createdby": "613903e4fc682fd9c47186f9",
         "_id": "6139182b59b234b4ea0d20f0",
-        "__v": 0
         }
     }
+    ```
 * getURL(short_url)
 
 * userURLs(user_id)
