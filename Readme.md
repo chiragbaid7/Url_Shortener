@@ -53,6 +53,6 @@ flexible to future inevitable changes.**
 
 ### System APIs
 
-    *  createURL(long_url,alias,user_id)
+    1. createURL(long_url,alias,user_id)
         Response body
-    *  getURL(short_url)
+    2. getURL(short_url)
