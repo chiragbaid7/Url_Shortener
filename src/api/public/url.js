@@ -6,7 +6,7 @@ router.get("/:id", async (req, res, next) => {
   try {
     const shorturl = DOMAIN + req.params.id;
     const response = await get(shorturl);
-    //page moved to a temporary location
+    //redirect-page moved to a temporary location
     res.status(302).redirect(response.longurl);
   } catch (err) {
     next(err);
