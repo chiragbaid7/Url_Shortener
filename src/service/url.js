@@ -2,9 +2,8 @@ const {
   createShortUrl,
   getShortUrl,
   getLongUrl,
-  appendUrl,
   getUrls,
-  deleteUrl,
+  delete_url,
   findUrl,
 } = require("../data-access/url");
 const { DOMAIN, BASE_62 } = require("../config/index");
@@ -13,7 +12,7 @@ const { customAlphabet } = require("nanoid");
 const nanoid = customAlphabet(BASE_62, 7);
 const { validateUrl, validateAlias } = require("../helpers/validator");
 
-const create = async (longurl, alias) => {
+const createURL = async (longurl, alias, user_id) => {
   await validateUrl(longurl);
   let shorturl;
   if (alias !== undefined) {
@@ -25,34 +24,30 @@ const create = async (longurl, alias) => {
   }
   //check if short url is already present in the database
   await getShortUrl(shorturl);
-  const result = await createShortUrl(shorturl, longurl);
-  //containes the document
+  const result = await createShortUrl(shorturl, longurl, user_id);
   return result;
 };
 const get = async (shorturl) => {
   const a = await getLongUrl(shorturl);
   return a;
 };
-const append = async (user_id, url_id) => {
-  await appendUrl(user_id, url_id);
-};
-const Userurls = async (user_id) => {
+
+const userURLs = async (user_id) => {
   const urls = await getUrls(user_id);
   return urls;
 };
-const Delete = async (id) => {
-  await deleteUrl(id);
+const deleteURL = async (id) => {
+  await delete_url(id);
 };
 
-const find = async (id) => {
+const findURL = async (id) => {
   const result = await findUrl(id);
   return result;
 };
 module.exports = {
-  create,
+  createURL,
   get,
-  append,
-  Userurls,
-  Delete,
-  find,
+  userURLs,
+  deleteURL,
+  findURL,
 };

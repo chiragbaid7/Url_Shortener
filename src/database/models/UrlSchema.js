@@ -15,6 +15,7 @@ const UrlSchema = new Schema({
     type: Number,
     default: -1,
   },
+  createdby: { type: Schema.Types.ObjectId, ref: "User" },
 });
 
 const Url = model("Url", UrlSchema);

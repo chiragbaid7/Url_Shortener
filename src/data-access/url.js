@@ -1,11 +1,10 @@
 const Url = require("../database/models/UrlSchema");
-const User = require("../database/models/UserSchema");
 const BaseError = require("../core/BaseError");
-
-const createShortUrl = async (shorturl, longurl) => {
+const createShortUrl = async (shorturl, longurl, user_id) => {
   const doc = new Url({
     shorturl: shorturl,
     longurl: longurl,
+    createdby: user_id,
   });
   doc.clickcount += 1;
   const newurl = await doc.save();
@@ -34,24 +33,19 @@ const getLongUrl = async (shorturl) => {
   await doc.updateOne({ clickcount: doc.clickcount + 1 });
   return doc;
 };
-const appendUrl = async (user_id, url_id) => {
-  await User.updateOne({ _id: user_id }, { $push: { Links: [url_id] } });
-};
+
 const getUrls = async (user_id) => {
-  const urls = await User.findOne({ _id: user_id }, "Links -_id").populate(
-    "Links"
-  );
+  const urls = await Url.find({ createdby: user_id }, "-createdby");
   return urls;
 };
-const deleteUrl = async (id) => {
+const delete_url = async (id) => {
   await Url.deleteOne({ _id: id });
 };
 module.exports = {
   createShortUrl,
   getShortUrl,
   getLongUrl,
-  appendUrl,
   getUrls,
-  deleteUrl,
+  delete_url,
   findUrl,
 };

@@ -11,7 +11,7 @@ const create = async (userdata) => {
     throw BaseError.Api401Error("User already exists,plz login!");
   }
   const user = await createUser(userdata);
-  const token = await sign(user._id);
+  const token = await sign(user.id);
   return { token, user };
 };
 const find = async (userdata) => {

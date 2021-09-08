@@ -12,6 +12,5 @@ const user = new Schema({
     type: String,
     required: true,
   },
-  Links: [{ type: Schema.Types.ObjectId, ref: "Url" }],
 });
 module.exports = model("User", user);
