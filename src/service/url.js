@@ -11,7 +11,20 @@ const { DOMAIN, BASE_62 } = require("../config/index");
 const { customAlphabet } = require("nanoid");
 const nanoid = customAlphabet(BASE_62, 7);
 const { validateUrl, validateAlias } = require("../helpers/validator");
-
+/*
+  this function is to generate short urls by converting COUNTER to 
+  base 62 which can rule out collision probability  
+  let COUNTER = Number(100000000000);
+  function generate() {
+    let number = COUNTER;
+    var string = "";
+    while (number) {
+      string = BASE_62[Math.floor(number % 62)] + string;
+      number = Math.floor(number / 62);
+    }
+    return string;
+}
+*/
 const createURL = async (longurl, alias, user_id) => {
   await validateUrl(longurl);
   let shorturl;
@@ -19,10 +32,12 @@ const createURL = async (longurl, alias, user_id) => {
     await validateAlias(alias);
     shorturl = DOMAIN + alias;
   } else {
-    //if reduce the id size to increase collison probabIlity
+    //if id size is reduced that can substantially increase collison probabIlity
     shorturl = DOMAIN + nanoid();
   }
-  //check if short url is already present in the database
+
+  //shorturl=DOMAIN+generate();
+  //COUNTER += 1;
   await getShortUrl(shorturl);
   const result = await createShortUrl(shorturl, longurl, user_id);
   return result;
