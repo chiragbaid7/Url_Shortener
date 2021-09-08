@@ -55,7 +55,7 @@ flexible to future inevitable changes.**
 
 * createURL(long_url,alias=None,user_id)
     * Response Body:201
-    ```
+    ```json
     {
         "message": "success",
         "data": {
@@ -71,7 +71,7 @@ flexible to future inevitable changes.**
 
 * listURLs(user_id)
     * Response Body:200 
-    ```
+    ```json
     {
         "data": [
             {
