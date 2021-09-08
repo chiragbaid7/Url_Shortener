@@ -91,10 +91,17 @@ flexible to future inevitable changes.**
   ```
 ### Database Design 
 
-|URL|                         |USERS|
-|--------|                    |--------|
-|_id:ObjectID|                |_id:ObjectID|
-|shorturl:string|             |name:String|  
-|longurl:string|              |email:String|
-|clickcount:Number|           |password:String|
+|URL|                       
+|--------|                  
+|_id:ObjectID|               
+|shorturl:string|            
+|longurl:string|             
+|clickcount:Number|          
 |createdby:ObjectId|
+
+|USERS|
+|--------|
+|_id:ObjectID|
+|name:String|  
+|email:String|
+|password:String|
