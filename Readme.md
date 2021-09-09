@@ -122,11 +122,19 @@ flexible to future inevitable changes.**
 
 - Base 62 is chosen as the Base encoding scheme
 - 7 character is the length of generated short URL
-
-* `62^7=3.5` trillion unique URL can be generated with this combinations
+- `62^7=3.5` trillion unique URLs can be generated
+- Assuming if the service hits 1000/sec createURLs requests
 
 ### Technique
 
 1. Short URLs from base conversion of random numbers(In use)
 
+   - 7 char Random Id is generated as short URL
+   - The collision probability increases if the size of the random Id is decreased
+   - So, after genrating the service makes a findURL call to the database to check for duplicates
+   - This can be a overhead
+
 2. Short URLs from base conversion of COUNTER(Implemented but not in use)
+   - A COUNTER variable is mainted and is passed to a custom function that returns a unique 7 char string and COUNTER is incremented
+   - Every generated string is unique so there is no need to check for duplicates
+   - Adding a large number might lead to INTEGER_OVERFLOW
