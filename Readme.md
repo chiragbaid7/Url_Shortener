@@ -116,4 +116,4 @@ flexible to future inevitable changes.**
 
 ### High Level Design
 
-<a href="https://ibb.co/6DySYjP"><img src="https://i.ibb.co/6DySYjP/Url-Shortener.jpg" alt="Url-Shortener" border="0"></a>
+<img src="https://i.ibb.co/6DySYjP/Url-Shortener.jpg" alt="Url-Shortener" border="0" width="500px">
