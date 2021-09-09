@@ -140,7 +140,7 @@ flexible to future inevitable changes.**
 
 ### Features
 
-\*Alias- Users can provide thier custom URLs
+- Alias- Users can provide thier custom URLs
 
 - Clickcount- Users can check no of clicks to thier shortURLs
 
