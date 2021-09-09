@@ -118,11 +118,12 @@ flexible to future inevitable changes.**
 
 <img src="https://i.ibb.co/5s13Tb8/Url-Shortener.jpg" alt="Url-Shortener" >
 
-### Technique
+### Assumptions
 
-    #### Assumptions
-    - Base 62 is chosen as the Base encoding scheme
-    - 7 character is the length of generated short URL
+- Base 62 is chosen as the Base encoding scheme
+- 7 character is the length of generated short URL
+
+### Technique
 
 1. Short URLs from base conversion of random numbers(In use)
 
