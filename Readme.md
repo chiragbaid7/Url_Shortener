@@ -125,11 +125,6 @@ _Assumptions_
 - Base 62 is chosen as the Base encoding scheme
 - 7 character is the length of generated short URL
 
-* $`62^7`$ 3.5 trillion URLs can be generated with this combination
-
 1. Short URLs from base conversion of random numbers(In use)
-
-   -
-   - A
 
 2. Short URLs from base conversion of COUNTER(Implemented but not in use)
