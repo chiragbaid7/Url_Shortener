@@ -111,8 +111,9 @@ flexible to future inevitable changes.**
 
 - store billions of records.
 - There are no relationships(No Joins) between records—other than storing which user created a URL.
-- The service is read-heavy.
-- The service requires huge space for storage
+- Service is read-heavy.
+- Service requires huge space for storing objects .
+- NoSQL database is easy to scale
 
 ### High Level Design
 
