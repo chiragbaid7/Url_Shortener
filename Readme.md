@@ -120,7 +120,7 @@ flexible to future inevitable changes.**
 
 ### Technique
 
-    *Assumptions*
+    #### Assumptions
     - Base 62 is chosen as the Base encoding scheme
     - 7 character is the length of generated short URL
 
