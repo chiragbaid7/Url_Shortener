@@ -35,7 +35,6 @@ const createURL = async (longurl, alias, user_id) => {
     //if id size is reduced that can substantially increase collison probabIlity
     shorturl = DOMAIN + nanoid();
   }
-
   //shorturl=DOMAIN+generate();
   //COUNTER += 1;
   await getShortUrl(shorturl);
@@ -47,7 +46,7 @@ const getURL = async (shorturl) => {
   return a;
 };
 
-const userURLs = async (user_id) => {
+const listURLs = async (user_id) => {
   const urls = await getUrls(user_id);
   return urls;
 };
@@ -62,7 +61,7 @@ const findURL = async (id) => {
 module.exports = {
   createURL,
   getURL,
-  userURLs,
+  listURLs,
   deleteURL,
   findURL,
 };

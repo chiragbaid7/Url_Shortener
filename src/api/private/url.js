@@ -1,21 +1,21 @@
 const router = require("express").Router();
 const {
   createURL,
-  userURLs,
+  listURLs,
   deleteURL,
   findURL,
 } = require("../../service/url");
 
-router.get("/urls", async (req, res, next) => {
+router.get("/list", async (req, res, next) => {
   //get all urls
   try {
-    const urls = await userURLs(req.id);
+    const urls = await listURLs(req.id);
     res.status(200).json({ data: urls });
   } catch (err) {
     next(err);
   }
 });
-router.post("/", async (req, res, next) => {
+router.post("/create", async (req, res, next) => {
   try {
     const { longurl, alias } = req.body;
     const result = await createURL(longurl, alias, req.id);
