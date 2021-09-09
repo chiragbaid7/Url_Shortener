@@ -126,13 +126,13 @@ flexible to future inevitable changes.**
 
 ### Technique
 
-1. Short URLs from base conversion of random numbers (In use)
+1. Short URLs from base conversion of random numbers (_In use_)
 
    - 7 char Random Id is generated as short URL
    - The collision probability increases if the size of the random Id is decreased
    - After generating, the service makes a findURL call to the database to check for duplicates which is an overhead
 
-2. Short URLs from base conversion of COUNTER (Implemented but not in use)
+2. Short URLs from base conversion of COUNTER (_Implemented but not in use_)
    - A COUNTER variable is mainted and is passed to a custom function that returns a unique 7 char string by converting COUNTER to its BASE_62 representation
      and COUNTER is incremented
    - Every generated string is unique so there is no need to check for duplicates
