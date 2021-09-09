@@ -123,7 +123,6 @@ flexible to future inevitable changes.**
 - Base 62 is chosen as the Base encoding scheme
 - 7 character is the length of generated short URL
 - `62^7=3.5` trillion unique URLs can be generated
-- Assuming if the service hits 1000/sec createURLs requests
 
 ### Technique
 
@@ -141,9 +140,10 @@ flexible to future inevitable changes.**
 
 ### Features
 
-    * Alias- Users can provide thier custom URLs
-    * Clickcount- Users can check no of clicks to thier shortURLs
+\*Alias- Users can provide thier custom URLs
+
+- Clickcount- Users can check no of clicks to thier shortURLs
 
 ### Future enhancement
 
-    * Cache layer can be introduced to cache URLs that are frequently accessed that reduces load on the server.
+- Cache layer can be introduced to cache URLs that are frequently accessed that reduces load on the server.
