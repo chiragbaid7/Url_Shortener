@@ -117,3 +117,15 @@ flexible to future inevitable changes.**
 ### High Level Design
 
 <img src="https://i.ibb.co/5s13Tb8/Url-Shortener.jpg" alt="Url-Shortener" >
+
+### Technique
+
+*Assumptions*  
+    * Base 62 is chosen as the Base encoding scheme
+    * 7 character is the length of generated short URL
+    * $`62^7`$=3.5 trillion URLs can be generated with this combination  
+1. Short URLs from base conversion of random numbers(In use)
+    * 
+    * A
+
+2. Short URLs from base conversion of COUNTER(Implemented but not in use)
