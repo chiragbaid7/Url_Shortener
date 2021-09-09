@@ -112,7 +112,7 @@ flexible to future inevitable changes.**
 - store billions of records.
 - There are no relationships(No Joins) between records—other than storing which user created a URL.
 - Service is read-heavy.
-- Service requires huge space for storing objects .
+- Service demands huge space for storing objects.
 - NoSQL database is easy to scale
 
 ### High Level Design
@@ -145,6 +145,6 @@ flexible to future inevitable changes.**
 
 - Clickcount- Users can check no of clicks to thier shortURLs
 
-### Future enhancement
+### Future enhancements
 
-- Cache layer can be introduced to cache URLs that are frequently accessed that reduces load on the server.
+- Cache layer can be introduced to cache URLs that are frequently accessed which can reduces load on the server.
