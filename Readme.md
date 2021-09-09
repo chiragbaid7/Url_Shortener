@@ -113,3 +113,7 @@ flexible to future inevitable changes.**
 - There are no relationships(No Joins) between records—other than storing which user created a URL.
 - The service is read-heavy.
 - The service requires huge space for storage
+
+### High Level Design
+
+<img src="https://ibb.co/6DySYjP">
