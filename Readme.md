@@ -123,7 +123,7 @@ flexible to future inevitable changes.**
 - Base 62 is chosen as the Base encoding scheme
 - 7 character is the length of generated short URL
 
-* `62^7=3.5`trillion unique URL can be generated with this combinations
+* `math 62^7=3.5`trillion unique URL can be generated with this combinations
 
 ### Technique
 
