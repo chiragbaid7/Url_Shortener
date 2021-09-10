@@ -1,12 +1,6 @@
-## Clean Architecture
+## URL SHORTENER
 
-> Your architectures should tell readers about the system, not about the frameworks you used in your system  
-> — Robert C. Martin
-
-<img src="https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg">
-
-**Clean Architecture aims to achieve separation of concerns by dividing the software into different layers thereby making the application
-flexible to future inevitable changes.**
+A URL shortener service creates a short url/aliases/tiny url against a long url.When a user click on the tiny url, he/she gets redirected to original url.
 
 ## Project Directory Structure
 
@@ -107,13 +101,6 @@ flexible to future inevitable changes.**
 | email:String    |
 | password:String |
 
-**Why NoSQL over SQL?**
-
-- store billions of records.
-- There are no relationships(No Joins) between records—other than storing which user created a URL.
-- Service is read-heavy.
-- Service demands huge space for storing objects.
-- NoSQL database is easy to scale
 
 ### High Level Design
 
