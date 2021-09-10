@@ -24,7 +24,7 @@ flexible to future inevitable changes.**
 |   |   └── auth.js
 │   ├── config
 │   │   └── index.js
-│   ├── core
+│   ├── ErrorHandeler
 │   │   ├── ApiErrorHandeler.js
 │   │   ├── BaseError.js
 │   │   └── httpStatusCode.js
@@ -141,9 +141,8 @@ flexible to future inevitable changes.**
 
 ### Features
 
-- Alias- Users can provide thier custom URLs
-
-- Clickcount- Users can check no of clicks to thier shortURLs
+- Alias - Users can provide thier custom URLs
+- Clickcount - Users can check no of clicks to thier shortURLs
 
 ### Future enhancements
 
