@@ -6,7 +6,10 @@ const urlprivate = require("./api/private/url");
 const user = require("./api/public/user");
 const { verifytoken } = require("./auth/auth");
 const { limiter } = require("./helpers/rate-limit");
-const { ApiErrorHandeler, Api400Error } = require("./core/APIErrorHandeler");
+const {
+  ApiErrorHandeler,
+  Api400Error,
+} = require("./ErrorHandeler/APIErrorHandeler");
 const { MONGO_URL } = require("./config/index");
 
 mongoose.connect(MONGO_URL);

@@ -1,4 +1,4 @@
-const BaseError = require("../core/BaseError");
+const BaseError = require("../ErrorHandeler/BaseError");
 const jwt = require("jsonwebtoken");
 const { SECRET_KEY } = require("../config/index");
 const verifytoken = async (req, res, next) => {

@@ -1,5 +1,5 @@
 const Url = require("../database/models/UrlSchema");
-const BaseError = require("../core/BaseError");
+const BaseError = require("../ErrorHandeler/BaseError");
 const createShortUrl = async (shorturl, longurl, user_id) => {
   const doc = new Url({
     shorturl: shorturl,

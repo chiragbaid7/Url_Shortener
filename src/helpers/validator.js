@@ -5,7 +5,7 @@ const {
   LoginSchema,
 } = require("./schema-validator");
 
-const BaseError = require("../core/BaseError");
+const BaseError = require("../ErrorHandeler/BaseError");
 module.exports = {
   validateUrl: async (longUrl) => {
     try {

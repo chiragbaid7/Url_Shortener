@@ -1,6 +1,6 @@
 const { validateSignup, validateLogin } = require("../helpers/validator");
 const { findUser, createUser } = require("../data-access/user");
-const BaseError = require("../core/BaseError");
+const BaseError = require("../ErrorHandeler/BaseError");
 const { sign } = require("../auth/auth");
 
 const create = async (userdata) => {
