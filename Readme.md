@@ -129,7 +129,7 @@ A URL shortener service creates a short url/aliases/tiny url against a long url.
 ### Features
 
 - Alias - Users can provide thier custom URLs
-- Clickcount - Users can check no of clicks to thier shortURLs
+- Clickcount - Users can check no of clicks on thier shortURLs
 
 ### Future enhancements
 
